@@ -147,7 +147,7 @@ def shirley(y, k, const):
 
     """
     y_right = const
-    bg = np.cumsum(y)[::-1]
+    bg = np.cumsum(y[::-1])[::-1]
     return k * bg + y_right
 
 def slope(y, k):
@@ -196,16 +196,6 @@ def slope(y, k):
     For further details, please refer to A. Herrera-Gomez et al [4]_.
     """
     n = len(y)
-    y_right = np.min(y)
-    y_temp = y - y_right
-    temp = []
-    bg = []
-    for i in range(n):
-        temp.append(np.sum(y_temp[i:]))
-    for j in range(n):
-        bg.append(np.sum(temp[j:]))
-    return np.asarray([-k * elem for elem in bg])
-
     y_right = np.min(y)
     y_temp = y - y_right
     temp = np.cumsum(y_temp[::-1])[::-1]
