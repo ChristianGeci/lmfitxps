@@ -199,7 +199,7 @@ def slope(y, k):
     y_right = np.min(y)
     y_temp = y - y_right
     temp = np.cumsum(y_temp[::-1])[::-1]
-    bg = np.cumsum(temp[::-1])[::-1]
+    bg = -np.cumsum(temp[::-1])[::-1]
 
     return -k * bg
 
