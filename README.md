@@ -40,10 +40,19 @@ Feel free to share your publication using lmfitxps in the [Discussion tab!](http
 - P. Weinert et al. [Structural, chemical, and magnetic investigation of a graphene/cobalt/platinum multilayer system on silicon carbide](http://dx.doi.org/10.1088/1361-6528/ad1d7b) Nanotechnology, **35** 165702 (2024). 
 - P. Lamichhane et al. [Investigating the synergy of rapidly synthesized iron oxide predecessor and plasma-gaseous species for dye-removal to reuse water in irrigation](https://doi.org/10.1016/j.chemosphere.2024.143040) Chemosphere, **24** 143040 (2024).
 - P. Weinert [Structural, chemical, and magnetic investigation of a graphene/cobalt/platinum multilayer system on silicon carbide : About the formation of magnetic structures in 2D cobalt layers](https://d-nb.info/1328839591) Dissertation (2024).
-- P. Schöngrundner [Search for crystalline SiO2 on the wet chemically treated 6H-SiC(0001) surface](https://doi.org/10.34726/HSS.2024.124590) TU Wien, Thesis (2024)  
+- P. Schöngrundner [Search for crystalline SiO2 on the wet chemically treated 6H-SiC(0001) surface](https://doi.org/10.34726/HSS.2024.124590) TU Wien, Thesis (2024).
+- N. Russo et al.   [Reductive mechanochemical synthesis of alkali molybdenum bronze nanoparticles](https://doi.org/10.1016/j.jssc.2024.125101) J. Solid State Chem. **342**, 125101 (2025).
 - J. A. Hochhaus et al. [Structural analysis of Sn on Au(111) at low coverages: Towards the Au2Sn surface alloy with alternating fcc and hcp domains](https://doi.org/10.1038/s41598-025-91733-2) Sci. Rep. **15**, 7953 (2025).
 - T.R. Acharya et al. [Non-thermal plasma-mediated green synthesis of chitosan-functionalized gold nanoparticles for enhanced cancer immunogenicity](https://doi.org/10.1016/j.jiec.2025.06.029) J. Ind. Eng. Chem. **36** (2025).
-- J. A. Hochhaus et al. [First evidence of a square-like Sn lattice on the Au2Sn surface alloy on Au(111)](https://doi.org/10.1016/j.apsusc.2025.164470) Appl. Surf. Sci., 164470 (2025). 
+- J. A. Hochhaus et al. [First evidence of a square-like Sn lattice on the Au2Sn surface alloy on Au(111)](https://doi.org/10.1016/j.apsusc.2025.164470) Appl. Surf. Sci., **714**, 164470 (2025).
+- T. Takenaka et al. [Three-Dimensional Niobium Coaxial Cavity with second Lifetime](https://doi.org/10.48550/arXiv.2510.01819) arXiv, 2510.01819 (2025).
+- J. A. Hochhaus et al. [Ultraflat Honeycomb Stanene Nanoribbons on Au(111)](https://doi.org/10.1002/admi.202500861) Adv. Mater. Interfaces, **24**, e00861 (2025).
+- T. R. Acharya et al. [Green synthesis of chitosan-functionalized silver nanoparticles using non-thermal plasma as biocompatible antimicrobials against multidrug-resistant pathogens](https://doi.org/10.48550/arXiv.2510.01819) Chem. Eng. J. Adv., **25**, 101010 (2025).
+- N. Russo, Lu Ping et al. [Dehydration Pathway Study of Ultrathin Ni (OH)2 Probed via In Situ X-Ray Photoelectron Spectromicroscopy](https://doi.org/10.1002/sia.70052) Surf. Interface Anal., (2026).
   
 Publications that use [LG4X-V2](https://github.com/Julian-Hochhaus/LG4X-V2), a graphical user interface (GUI) for XPS/XAS analysis that heavily utilizes `lmfit` and `lmfitxps`, are also included.
 
+## KherveFitting
+The free, open-source fitting software KherveFitting uses some functions from the lmfitxps package. I highly recommend checking it out!
+G. Kerherve et al. [KherveFitting: An Open Source Software for Fitting X-Ray Photoelectron Spectroscopy Data](https://doi.org/10.1002/sia.70032) Surf. Interface Anal., **58**, 54-65 (2026).
+And directly on [Github](https://github.com/KherveFitting/KherveFitting)
