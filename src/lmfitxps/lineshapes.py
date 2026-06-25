@@ -53,7 +53,7 @@ def dublett(x, amplitude, sigma, gamma, gaussian_sigma, center, soc, height_rati
         1 / (np.sqrt(2 * np.pi) * gaussian_sigma) * gaussian(x, amplitude=1, center=np.mean(x), sigma=gaussian_sigma),
         is_binding_energy=is_binding_energy
     )
-    return amplitude * conv_temp / max(conv_temp)
+    return amplitude * conv_temp / np.abs(np.trapezoid(conv_temp, x = x))
 
 
 def singlett(x, amplitude, sigma, gamma, gaussian_sigma, center):
@@ -86,7 +86,7 @@ def singlett(x, amplitude, sigma, gamma, gaussian_sigma, center):
     conv_temp = fft_convolve(doniach(x, amplitude=1, center=center, sigma=sigma, gamma=gamma),
                                  1 / (np.sqrt(2 * np.pi) * gaussian_sigma) * gaussian(x, amplitude=1, center=np.mean(x),
                                                                                       sigma=gaussian_sigma), is_binding_energy=is_binding_energy)
-    return amplitude * conv_temp / max(conv_temp)
+    return amplitude * conv_temp / np.abs(np.trapezoid(conv_temp, x = x))
 
 
 kb = 8.6173e-5  # Boltzmann k in eV/K , replace by scipy const value
