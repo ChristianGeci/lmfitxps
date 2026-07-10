@@ -105,7 +105,7 @@ def doniach(x, amplitude=1.0, center=0, sigma=1.0, gamma=0.0):
     arg = -(x-center)/max(tiny, sigma)
     gm1 = (1.0 - gamma)
     scale = amplitude/max(tiny, (sigma**gm1))
-    return scale*np.cos(pi*gamma/2 + gm1*np.arctan(arg))/(1 + arg**2)**(gm1/2)
+    return scale*np.cos(np.pi*gamma/2 + gm1*np.arctan(arg))/(1 + arg**2)**(gm1/2)
 
 
 kb = 8.6173e-5  # Boltzmann k in eV/K , replace by scipy const value
