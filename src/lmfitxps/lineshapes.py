@@ -1,5 +1,5 @@
 import numpy as np
-from lmfit.lineshapes import doniach, gaussian, thermal_distribution
+from lmfit.lineshapes import gaussian, thermal_distribution
 from scipy.signal import convolve as sc_convolve
 __author__ = "Julian Andreas Hochhaus"
 __copyright__ = "Copyright 2023"
@@ -87,6 +87,25 @@ def singlett(x, amplitude, sigma, gamma, gaussian_sigma, center):
                                  1 / (np.sqrt(2 * np.pi) * gaussian_sigma) * gaussian(x, amplitude=1, center=np.mean(x),
                                                                                       sigma=gaussian_sigma), is_binding_energy=is_binding_energy)
     return amplitude * conv_temp / np.abs(np.trapezoid(conv_temp, x = x))
+
+tiny = 1.0e-15
+
+def doniach(x, amplitude=1.0, center=0, sigma=1.0, gamma=0.0):
+    """Return a Doniach Sunjic asymmetric lineshape.
+
+    doniach(x, amplitude, center, sigma, gamma) =
+        amplitude / sigma^(1-gamma) *
+        cos(pi*gamma/2 + (1-gamma) arctan((x-center)/sigma) /
+        (sigma**2 + (x-center)**2)**[(1-gamma)/2]
+
+    For example used in photo-emission; see
+    http://www.casaxps.com/help_manual/line_shapes.htm for more information.
+
+    """
+    arg = -(x-center)/max(tiny, sigma)
+    gm1 = (1.0 - gamma)
+    scale = amplitude/max(tiny, (sigma**gm1))
+    return scale*np.cos(pi*gamma/2 + gm1*np.arctan(arg))/(1 + arg**2)**(gm1/2)
 
 
 kb = 8.6173e-5  # Boltzmann k in eV/K , replace by scipy const value
